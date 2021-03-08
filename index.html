@@ -11,7 +11,7 @@
   <script>
     fetch("https://typing--practice.herokuapp.com/word?amount=20&language=indonesian")
       .then(res => res.json())
-      .then(res => document.write(res))
+      .then(res => console.log(res))
       .catch(err => document.write(err))
   </script>
   
