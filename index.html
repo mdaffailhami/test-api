@@ -11,7 +11,14 @@
   <script>
     fetch("https://typing--practice.herokuapp.com/word?amount=20&language=indonesian")
       .then(res => res.json())
-      .then(res => console.log(res))
+      .then(res => {
+        console.log(res);
+        
+      const words = res.words;
+        for (let i = 0; i < words; i++){
+          document.write(words[i] + '<br>');
+        }
+      })
       .catch(err => document.write(err))
   </script>
   
